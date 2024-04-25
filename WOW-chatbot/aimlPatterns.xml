@@ -1,0 +1,93 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>Hello! How are you?</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> WHAT CAN YOU TELL ME ABOUT </pattern>
+  <template>I can tell you about the seven wonders of the world</template></category>
+  
+<category> <pattern> WHAT TOPIC CAN YOU TALK ABOUT </pattern>
+  <template><srai> WHAT CAN YOU TELL ME ABOUT</srai></template></category>
+
+<category> <pattern> CAN YOU TELL ME ABOUT THE WONDERS OF THE WORLD </pattern>
+  <template>Yes, what would you like to know?</template></category>
+
+<category> <pattern> DO YOU KNOW ANYTHING ABOUT THE WONDERS OF THE WORLD </pattern>
+  <template><srai>CAN YOU TELL ME ABOUT THE WONDERS OF THE WORLD</srai></template></category>
+  
+<category><pattern>TELL ME ABOUT THE SEVEN WONDERS</pattern>
+  <template>I'd be happy to. Which wonder are you interested in learning about?</template></category>  
+
+<category><pattern>WHAT ARE THE SEVEN WONDERS</pattern>
+  <template>The Seven Wonders are a list of remarkable constructions of classical antiquity.</template></category>
+
+<category><pattern>WHAT DO YOU KNOW ABOUT THE SEVEN WONDERS</pattern>
+  <template>The Seven Wonders of the Ancient World are a famous list of remarkable constructions from ancient times.</template></category>
+
+
+<!-- Fuzzy Game -->
+<category><pattern>FUZZY GAME</pattern>
+  <template>#40$</template></category>
+  
+<category> <pattern> I WOULD LIKE TO PLAY A GAME</pattern>
+  <template><srai>FUZZY GAME</srai></template></category>
+  
+<category> <pattern> DO YOU HAVE A GAME I CAN PLAY</pattern>
+  <template>Yes here it is<srai>FUZZY GAME</srai></template></category>
+  
+<!-- Logic input -->
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>  
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#32$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT * IS IN *</pattern>
+  <template>#33$<star index="1"/> is <star index="2"/></template></category>
+
+<!-- Select Image -->
+<category><pattern> WHAT IMAGE IS THIS </pattern>
+   <template>#50</template></category>
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>

@@ -1,0 +1,12 @@
+Wonder(x)
+Country(y)
+"isIn(India,TajMahal)"
+"isIn(Jordan,Petra)"
+"isIn(China,GreatWall)"
+"isIn (y,x) & Wonder (x) & Country(y) -> AsianCountry(y)"
+"isIn (y,x) & Wonder (x) & Country(y) -> AsianWonder(x)"
+"isIn(Italy,Colosseum)"
+"isIn (Italy,x) & Wonder (x) & Country(Italy) -> EuropeanWonder(x)"
+"isIn (y,Colosseum) & Wonder (Colosseum) & Country(y) -> EuropeanCountry(y)"
+Wonder(chichenItza)
+Wonder(MachuPiccu)
